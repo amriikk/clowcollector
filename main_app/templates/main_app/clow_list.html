@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>ClowCard List</h1>
+
+{% for clow in clows %}
+    <div class="card blue accent-1">
+        <div class="card-content">
+            <span class="card-title">{{ clow.name }}</span>
+            <p>Sign: {{ clow.sign }}</p>
+            {% if clow.magic == 'Western' %}
+            <p>Magic: {{ clow.magic }}</p>
+            {% else %}
+            <p>Magic: Eastern</p>
+            {% endif %}
+            <p>Description: {{ clow.description }}</p>
+        </div>
+    </div>
+
+{% endfor %}
+{% endblock %}

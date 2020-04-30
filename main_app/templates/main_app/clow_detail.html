@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>ClowCard Details</h1>
+
+<div class="card blue accent-2">
+  <div class="card-content">
+    <span class="card-title">{{ clow.name }}</span>
+    <p>Sign: {{ clow.sign }}</p>
+    {% if clow.magic == Western %}
+    <p>Magic: {{ clow.magic }}</p>
+    {% else %}
+    <p>Magic: Eastern</p></br>
+    {% endif %}
+    <p>Description: {{ clow.description }}</p>
+  </div>
+  
+  <div class="card-action pink accent-2">
+    <a href="{% url 'clows_update' clow.id %}">Edit</a>
+    <a href="{% url 'clows_delete' clow.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}
