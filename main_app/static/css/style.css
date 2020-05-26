@@ -6,12 +6,17 @@ h1 {
     color: gold;
 }
 
+form {
+    background: purple;
+    border-radius: 8px;
+}
+
 div.form {
-    background: rgb(50, 75, 115);;
+    background: rgb(50, 75, 115);
 }
 
 input.btn {
-    background-color: crimson;
+    background-color: crimson
 }
 
 body {
